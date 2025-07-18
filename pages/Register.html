@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    body {
+            font-family: Arial, sans-serif;
+            background:radial-gradient(#fff,#ffd6d6);;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+    }
+
+    .login-container{
+            background-color: white;
+            text-align: center;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            border-radius: 10px;
+
+    }
+
+    input[type="text"] ,input[type="password"]{
+        padding: 10px;
+        width:90%;
+        margin:10px;  
+    }
+
+    .fp a{
+        padding-left: 7px;
+    }
+
+    .forgotpassword-container{
+        padding: 10px ;
+    }
+
+    .login-button{
+        display: inline-block;
+        color:white;
+        padding: 10px 20px;
+        background-color: green;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .register{
+        display:inline-block;
+        padding: 10px;
+    }
+</style>
+</head>
+
+<body>
+
+    <div class="login-container">
+        <h1>Login</h1>
+        <form action="http://localhost:3000/submit" method="post">
+            <input type="text" placeholder="Username" name="username" required><br>
+            <input type="password" placeholder="Password" name="password" required><br>
+            <div class="forgotpassword-container">
+            <lable class="fp">
+                <input type="checkbox">Remember me
+                <a href=""  >Forgot Password?</a>
+            </lable>
+            </div>
+            <button type="submit" class="login-button">Login</button>
+            <br>
+            <lable class="register">
+                Don't have an account?
+                <a href="" >Register</a>
+            </lable>
+        </form>
+    </div>
+
+
+</body>
+</html>

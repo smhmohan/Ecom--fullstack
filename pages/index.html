@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background">
+      <div class="container">
+        <div class="navbar">
+          <nav>
+            <div class="logo">
+              <img src="../images/logo.png" width="125px" />
+            </div>
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="product.html">Product</a></li>
+              <li><a href="">about</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <h1 class="col-1-h">Give your workout<br />A new workout</h1>
+          <p class="col-1-p">
+            Success isn't always about greatness. It's about consistency.
+            Consistent<br />hard work gains success. Greatness will come.
+          </p>
+        </div>
+        <div class="col-2">
+          <img src="../images/image1.png" />
+        </div>
+      </div>
+    </div>
+
+    <div class="catagories">
+      <div class="row1">
+        <div class="col-3">
+          <img src="../images/category-1.jpg" width="300px" height="300px" />
+        </div>
+        <div class="col-3">
+          <img src="../images/category-2.jpg" width="300px" height="300px" />
+        </div>
+        <div class="col-3">
+          <img src="../images/category-3.jpg" width="300px" height="300px" />
+        </div>
+      </div>
+    </div>
+
+    <div class="feature">
+      <h1>Featured Product</h1>
+      <div class="row2">
+        <div class="col-4">
+          <img src="../images/product-1.jpg" height="250px" width="250px" />
+          <h4>T-Shirt</h4>
+          <p>$39.00</p>
+        </div>
+        <div class="col-4">
+          <img src="../images/product-2.jpg" height="250px" width="250px" />
+          <h4>Roadster</h4>
+          <p>$29.00</p>
+        </div>
+        <div class="col-4">
+          <img src="../images/product-3.jpg" height="250px" width="250px" />
+          <h4>Dockstreet</h4>
+          <p>$48.90</p>
+        </div>
+        <div class="col-4">
+          <img src="../images/product-4.jpg" height="250px" width="250px" />
+          <h4>T-Shirt</h4>
+          <p>$39.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="latest">
+      <h1>Latest Product</h1>
+      <div class="row3">
+        <div class="col-5">
+          <img src="../images/product-5.jpg" height="250px" width="250px" />
+          <h4>Sneakers</h4>
+          <p>$35.50</p>
+        </div>
+        <div class="col-5">
+          <img src="../images/product-6.jpg" height="250px" width="250px" />
+          <h4>T-Shirt</h4>
+          <p>$50.00</p>
+        </div>
+        <div class="col-5">
+          <img src="../images/product-7.jpg" height="250px" width="250px" />
+          <h4>HRX</h4>
+          <p>$19.00</p>
+        </div>
+        <div class="col-5">
+          <img src="../images/product-8.jpg" height="250px" width="250px" />
+          <h4>Fossil Watch</h4>
+          <p>$150.00</p>
+        </div>
+        <div class="col-5">
+          <img src="../images/product-9.jpg" height="250px" width="250px" />
+          <h4>Roadster</h4>
+          <p>$150.00</p>
+        </div>
+        <div class="col-5">
+          <img src="../images/product-10.jpg" height="250px" width="250px" />
+          <h4>Hrx shoes</h4>
+          <p>$49.90</p>
+        </div>
+        <div class="col-5">
+          <img src="../images/product-11.jpg" height="250px" width="250px" />
+          <h4>Casual Shoes</h4>
+          <p>$39.00</p>
+        </div>
+        <div class="col-5">
+          <img src="../images/product-12.jpg" height="250px" width="250px" />
+          <h4>Nike black track</h4>
+          <p>$50.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="background2">
+      <div class="row4">
+        <div class="col-6">
+          <h1>Smart Band 4</h1>
+          <p>
+            The Mi Smart Band 4 features a 39.9% larger (than Mi Band 3) AMOLED
+            color full-touch display with adjustable brightness, so everything
+            is clear as can be.
+          </p>
+        </div>
+        <div class="col-6">
+          <img src="../images/exclusive.png" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row5">
+      <div class="col-7">
+        <img src="../images/logo-coca-cola.png" />
+      </div>
+      <div class="col-7">
+        <img src="../images/logo-godrej.png" />
+      </div>
+      <div class="col-7">
+        <img src="../images/logo-oppo.png" />
+      </div>
+      <div class="col-7">
+        <img src="../images/logo-paypal.png" />
+      </div>
+      <div class="col-7">
+        <img src="../images/logo-philips.png" />
+      </div>
+    </div>
+
+    <div class="about">
+      <h2>
+        We accelerate transformation by unlocking the power of people and
+        technology.
+      </h2>
+      <p>
+        As a leading solutions integrator, we drive speed, scale, resilience and
+        innovation to our clients across the globe combining our technical
+        expertise, broad solutions portfolio and supply chain capabilities to
+        help businesses achieve their ambitious goals.
+      </p>
+    </div>
+
+    <script>
+      function logout() {
+        // Clear session or token if applicable
+        // Redirect to login page or home page
+        console.log("Logging out...");
+        fetch("http://localhost:3000/Logout", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }).then((response) => {
+          if (response.ok) {
+            console.log("Logout successful");
+            window.location.href = "http://127.0.0.1:5501/pages/Register.html";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

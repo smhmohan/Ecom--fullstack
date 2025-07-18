@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{
+margin: 0;
+padding: 0;
+}
+
+.navbar{
+    padding: 20px;
+}
+
+ul,li{
+    display: inline;
+}
+
+.logo{
+    display: inline;
+}
+
+ul{
+    padding-left:65% ;
+}
+
+li{
+    padding-left: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: #555;
+}
+
+a:hover{
+    cursor: pointer;
+    color:black
+
+}
+
+p{
+    color:#555;
+}
+
+.container{
+    padding-left: 25px;
+    padding-right: 25px;
+    display: inline;
+}
+
+.background{
+    background:radial-gradient(#fff,#ffd6d6);
+}
+
+.row{
+    display:flex;
+    align-items: center;
+    padding-left: 25px;
+}
+
+.col-2{
+    flex-basis: 50%;   
+}
+
+.col-2 img{
+    max-width: 100%;
+    padding: 50px;
+}
+
+.col-2 h1{
+    font-size: 50px;
+}
+
+.col-2 p{
+    font-size: 20px;
+    padding:10px 0;   
+}
+
+.col-2 h3{
+    padding:10px 0;
+}
+
+.col-2 button{
+    background-color: red;
+    padding: 10px;
+    color:white;
+}
+
+.related-product {
+    text-align: center;
+    padding: 40px;
+}
+
+.related-product h1 {
+    margin-bottom: 30px;
+    color: red;
+}
+
+.row2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.col-6 {
+    flex: 0 1 250px; /* Fixed width for images */
+    text-align: center;
+}
+
+.col-6:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+.cart-message {
+    display: none;
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px 15px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+input[type="checkbox"].cart-toggle {
+    display: none;
+}
+
+input[type="checkbox"].cart-toggle:checked ~ .cart-message {
+    display: block;
+}
+
+.add-to-cart-label {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-to-cart-label:hover {
+    background-color: darkred;
+}
+
+
+</style>
+</head>
+
+
+
+<body>
+<div class="background">
+<div class="container">
+    <div class="navbar">
+        <nav>
+            <div class="logo"> 
+            <img src="../images/logo.png"  width="125px">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="">about</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="Register.html">logout</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</div>
+</div>
+
+<div class="row">
+    <div class="col-2">
+        <img src="../images/product-1.jpg" height="400px" width="400px">
+        
+
+    </div>
+    
+    
+    <div class="col-2">
+        <p>Home/T-Shirt</p>
+        <h1 class="col-1-h">
+            Red Printed Tshirt<br>by HRX
+        </h1>
+        <p>$50.00</p>
+        
+        <input type="checkbox" id="cart" class="cart-toggle">
+        <label for="cart" class="add-to-cart-label">Add To Cart</label>
+
+        <div class="cart-message">
+        ✅ Product added to cart!
+        </div>
+
+        <h3>PRODUCT DETAILS</h3>
+        <p>Give your summer wardrobe a style upgrade with the HRX Men's Active T-shirt, Team it with a pair of shorts for your morning workout or a denims for an evening out with the guys.</p>
+    </div><br>
+    <div class="col-5">
+        <img src="../images/gallery-1.jpg" height="200px" width="200px">
+        <img src="../images/gallery-2.jpg" height="200px" width="200px">
+    </div>
+    <div class="col-4">
+        <img src="../images/gallery-3.jpg" height="150px" width="150px">
+        <img src="../images/gallery-4.jpg" height="150px" width="150px">
+    </div>
+</div>
+
+<div class="related-product">
+    <h1>Related Products</h1>
+    <div class="row2">
+        <div class="col-6">
+            <img src="../images/product-1.jpg" height="250px" width="250px">
+            <h4>T-Shirt</h4>
+            <p>$39.00</p>
+        </div>
+        <div class="col-6">
+            <img src="../images/product-2.jpg" height="250px" width="250px">
+            <h4>Roadster</h4>
+            <p>$29.00</p>
+        </div>
+        <div class="col-6">
+            <img src="../images/product-3.jpg" height="250px" width="250px">
+            <h4>Dockstreet</h4>
+            <p>$48.90</p>
+        </div>
+        <div class="col-6">
+            <img src="../images/product-4.jpg" height="250px" width="250px">
+            <h4>T-Shirt</h4>
+            <p>$39.00</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Product Page</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="background">
+    <div class="container">
+        <div class="navbar">
+            <nav>
+                <div class="logo">
+                    <img src="/images/logo.png" width="125px">
+                </div>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-2">
+        <img th:src="@{|/${product.imageUrl}|}" height="400px" width="400px">
+    </div>
+    <div class="col-2">
+        <p>Home / <span th:text="${product.name}"></span></p>
+        <h1 th:text="${product.name}"></h1>
+        <p th:text="'$' + ${product.price}"></p>
+
+        <label class="add-to-cart-label">Add To Cart</label>
+        <div class="cart-message">✅ Product added to cart!</div>
+
+        <h3>PRODUCT DETAILS</h3>
+        <p th:text="${product.description}"></p>
+    </div>
+</div>
+
+<div class="related-product">
+    <h1>Related Products</h1>
+    <div class="row2">
+        <div class="col-6" th:each="p : ${relatedProducts}">
+            <img th:src="@{|/${p.imageUrl}|}" height="250px" width="250px">
+            <h4 th:text="${p.name}"></h4>
+            <p th:text="'$' + ${p.price}"></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
